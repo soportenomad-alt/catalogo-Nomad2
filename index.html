@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Catálogo de pruebas genómicas</title>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+.qr-cta-btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 16px;
+  border-radius:12px;
+  font-weight:600;
+  text-decoration:none;
+  background:#00B2FF;
+  color:#fff;
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+}
+.qr-cta-btn:active { transform: translateY(1px); }
+.qr-cta-btn:focus { outline:2px solid rgba(255,255,255,.3); outline-offset:2px; }
+@media (max-width:640px){
+  .qr-cta-btn{ width: 90%; text-align:center; }
+}
+</style></head>
+<body>
+<header class="hero">
+<video autoplay="" class="hero-video" loop="" muted="" playsinline="">
+<source src="media/218955_small.mp4" type="video/mp4"/>
+</video>
+<div class="overlay"></div>
+<div class="hero-content">
+<img alt="Nomad" class="hero-logo" src="logos/logosNomad-14.png"/>
+<p>Catálogo de pruebas genómicas</p>
+</div>
+</header>
+<section class="filters">
+<input id="search" placeholder="Buscar prueba o descripción..." type="search"/>
+<label>Orden alfabético:
+      <select id="order">
+<option value="az">A - Z</option>
+<option value="za">Z - A</option>
+</select>
+</label>
+<button id="apply">Aplicar</button>
+<button id="clear">Limpiar</button>
+</section>
+<main>
+<div class="grid" id="grid"></div>
+</main>
+<template id="card-template">
+<article class="card glass">
+<img alt="Imagen de prueba" class="thumb clickable"/>
+<h3 class="title"></h3>
+<details class="acc">
+<summary>Descripción</summary>
+<div class="acc-body"><p class="desc"></p></div>
+</details>
+<details class="acc">
+<summary>LINK</summary>
+<div class="acc-body"><a class="cta">LINK</a></div>
+</details>
+</article>
+</template>
+<div class="modal" id="imgModal">
+<span class="close">×</span>
+<img class="modal-content" id="modalImage"/>
+</div>
+<script src="app.js"></script>
+<!-- QR footer injected -->
+<footer class="qr-footer">
+<div class="qr-box">
+<img alt="QR Nomad Genetics" class="qr-img" src="assets/images/qr-nomad.png"/>
+<div class="qr-caption">Escanéame para visitar Nomad Genetics</div><a class="qr-cta-btn" href="https://soporteti-desing.github.io/Nomad/" rel="noopener" target="_blank">Visitar Nomad Genetics</a>
+</div>
+</footer>
+</body>
+</html>
